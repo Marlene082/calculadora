@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Estilo base para botones numéricos -->
+    <style name="CalcButton">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">64dp</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:layout_columnWeight">1</item>
+        <item name="android:backgroundTint">#1C407A</item> <!-- Azul llamativo -->
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <!-- Botones de operador: suma, resta, etc. -->
+    <style name="CalcButtonOperator" parent="CalcButton">
+        <item name="android:backgroundTint">#3D0C6B</item> <!-- Naranja -->
+    </style>
+
+    <!-- Botón de igual -->
+    <style name="CalcButtonEqual" parent="CalcButton">
+        <item name="android:backgroundTint">#4C98AF</item> <!-- Verde -->
+    </style>
+
+    <!-- Botones especiales: borrar, CA, porcentaje -->
+    <style name="CalcButtonSpecial" parent="CalcButton">
+        <item name="android:backgroundTint">#9C27B0</item> <!-- Morado -->
+    </style>
+
+</resources>
