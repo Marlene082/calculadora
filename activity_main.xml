@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="#121212"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="32sp"
+        android:textColor="#FFFFFF"
+        android:gravity="end"
+        android:padding="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="#1E1E1E" />
+
+    <TextView
+        android:id="@+id/tvTemp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="20sp"
+        android:textColor="#B0BEC5"
+        android:gravity="end"
+        android:padding="8dp"
+        android:layout_marginBottom="16dp"
+        android:background="#1E1E1E" />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:columnCount="4"
+        android:rowCount="5"
+        android:alignmentMode="alignMargins"
+        android:useDefaultMargins="true">
+
+        <!-- Fila 1 -->
+        <Button android:text="CA" style="@style/CalcButtonSpecial" android:onClick="borrar" />
+        <Button android:text="C" style="@style/CalcButtonSpecial" android:onClick="borrar" />
+        <Button android:text="%" style="@style/CalcButtonOperator" android:onClick="cambiarOperador" />
+        <Button android:text="÷" style="@style/CalcButtonOperator" android:onClick="cambiarOperador" />
+
+        <!-- Fila 2 -->
+        <Button android:text="7" style="@style/CalcButton" android:onClick="seleccionarNumero" />
+        <Button android:text="8" style="@style/CalcButton" android:onClick="seleccionarNumero" />
+        <Button android:text="9" style="@style/CalcButton" android:onClick="seleccionarNumero" />
+        <Button android:text="x" style="@style/CalcButtonOperator" android:onClick="cambiarOperador" />
+
+        <!-- Fila 3 -->
+        <Button android:text="4" style="@style/CalcButton" android:onClick="seleccionarNumero" />
+        <Button android:text="5" style="@style/CalcButton" android:onClick="seleccionarNumero" />
+
+        <Button
+            style="@style/CalcButton"
+            android:layout_width="wrap_content"
+            android:onClick="seleccionarNumero"
+            android:text="6" />
+        <Button android:text="-" style="@style/CalcButtonOperator" android:onClick="cambiarOperador" />
+
+        <!-- Fila 4 -->
+        <Button android:text="1" style="@style/CalcButton" android:onClick="seleccionarNumero" />
+        <Button android:text="2" style="@style/CalcButton" android:onClick="seleccionarNumero" />
+        <Button android:text="3" style="@style/CalcButton" android:onClick="seleccionarNumero" />
+        <Button android:text="+" style="@style/CalcButtonOperator" android:onClick="cambiarOperador" />
+
+        <!-- Fila 5 -->
+        <Button android:text="0" style="@style/CalcButton" android:onClick="seleccionarNumero" />
+        <Button android:text="." style="@style/CalcButton" android:onClick="seleccionarNumero" />
+        <Button android:text="=" style="@style/CalcButtonEqual" android:onClick="igual"
+            android:layout_columnSpan="2" />
+    </GridLayout>
+
+</LinearLayout>
